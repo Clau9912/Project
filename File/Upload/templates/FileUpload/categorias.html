@@ -1,0 +1,27 @@
+{% extends "FileUpload/layout.html"%}
+{% block content %}
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre de Archivo</th>
+            <th scope="col">Archivo</th>
+            <th scope="col">Categoria</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">{{cont}}</th>
+            <td>{{value1}}</td>
+            <td>
+                {% if upload_file_url %}
+                <a href="{{upload_file_url}}">{{upload_file_url}}</a>
+                {% endif %}
+            </td>
+            <td>{{value2}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

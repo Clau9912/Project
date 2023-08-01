@@ -1,0 +1,25 @@
+{% extends "FileUpload/layout.html" %}
+{% block content %}
+<div class="container col-md-4 offset-md-4">
+    <form method="post" action="categorias" class="card card-body text-center text-black p-5"
+          enctype="multipart/form-data">
+        {% csrf_token %}
+        <h4><strong>Subir Archivo</strong></h4>
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre de archivo</label>
+            <input type="text" class="form-control" name="mb">
+        </div>
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label"></label>
+            <input class="form-control form-control-sm" id="formFileSm" type="file" name="mfile">
+        </div>
+        <div class="mb-4">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" name="category" id="flexSwitchCheckChecked" checked>
+                <label class="form-check-label" for="flexSwitchCheckChecked">Importante</label>
+            </div>
+        </div>
+        <button class="btn btn-secondary" type="submit">Subir</button>
+    </form>
+</div>
+{% endblock %}
